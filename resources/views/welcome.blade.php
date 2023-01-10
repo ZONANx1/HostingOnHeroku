@@ -28,7 +28,7 @@
 		      
 	          <p class="w-100 text-center">&mdash; Mulakan Dengan &mdash;</p>
 	          <div class="social d-flex text-center">
-	          	<a href="{{ route('login') }}" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>Log Masuk try je</a>
+	          	<a href="{{ route('login') }}" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>Log Masuk</a>
 	          	<a href="{{ route('register') }}" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Daftar</a>
 	          </div>
 		      </div>
