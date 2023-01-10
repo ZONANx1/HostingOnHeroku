@@ -57,7 +57,7 @@
                                 <td>{{$Pembelajaran->created_at}}</td>
                                     <td>
                                 <div class="table-data-feature">
-                                    
+
                                         <a class="item" data-toggle="tooltip" data-placement="top" title="Edit" href="{{url('/admin/edit-pembelajaran/'.$Pembelajaran->id)}}">
                                             <ion-icon name="create-outline" ></ion-icon>
                                         </a>
@@ -70,21 +70,7 @@
                             <tr class="spacer"></tr>
                             @endforeach
                         </tbody>
-                          <tfoot>
-                               <tr>
-                                <th rowspan="1" colspan="1">ID</th>
-                                <th rowspan="1" colspan="1">Nama</th>
-                                <th rowspan="1" colspan="1">Sesi</th>
-                                <th rowspan="1" colspan="1">Kelas</th>                             
-                                <th rowspan="1" colspan="1">Waktu Mula</th>
-                                <th rowspan="1" colspan="1">Waktu Tamat</th>
-                                <th rowspan="1" colspan="1">Kehadiran</th>
-                                <th rowspan="1" colspan="1">Butiran</th>
-                                <th rowspan="1" colspan="1">Tahap Kemajuan (%)</th>
-                                <th rowspan="1" colspan="1">Tarikh</th>
-                                <th rowspan="1" colspan="1">Tindakan</th>
-                          </tr>
-        </tfoot>
+
        </table> </div></div>
       </div>
      </div>
@@ -97,4 +83,4 @@
   <script src="bootstrap/js/bootstrap.js"></script>
   <script src="js/my-login.js"></script>
   @endsection
-  
+

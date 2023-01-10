@@ -60,20 +60,20 @@
                               <div class="col col-md-3">
                                 <label for="waktu_mula">Waktu Mula</label>
                               </div>
-                              <div class="col col-md-3">               
+                              <div class="col col-md-3">
                                 <input type="time" name="waktu_mula" id="waktu_mula" class="form-control" required>
-                              </div> 
+                              </div>
                             </div>
 
                       <div class="row form-group">
                         <div class="col col-md-3">
                            <label for="waktu_tamat">Waktu Tamat</label>
                         </div>
-                        <div class="col col-md-3">      
+                        <div class="col col-md-3">
                          <input type="time" name="waktu_tamat" id="waktu_tamat" class="form-control" required>
                         </div>
                      </div>
-                           
+
                         <div class="row form-group">
                             <div class="col col-md-3">
                                 <label for="komen" class=" form-control-label">Butiran</label>
@@ -93,16 +93,13 @@
                        </div>
 
                        <div class=" row form-group">
-                        <div class="col col-md-3">
-                            <label for="kehadiran" class="form-control-label">Kehadiran
-                            </label>
-                        </div>
+
                         <div class="col-12 col-md-9">
-                            <input type="radio" id="ya" name="kehadiran" value="Ya" checked required> Ya</input>
+                            <input type="hidden" id="ya" name="kehadiran" value="Ya" checked required></input>
                         </div>
                         </div>
-                        
-                        <div class="card-footer" align="center">
+
+                        <div class="" align="center">
                             <button type="submit" class="btn btn-primary" style="margin-right: 70px;">
                                 <i class="fa fa-dot-circle-o"></i> Hantar
                             </button>
