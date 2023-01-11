@@ -73,7 +73,7 @@
                                         colspan="1" aria-label="CSS grade: activate to sort column ascending"></th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                         colspan="1" aria-label="CSS grade: activate to sort column ascending">Penyakit
-                                        Buah Pinggang</th>
+                                        Buah Pinggang </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                         colspan="1" aria-label="CSS grade: activate to sort column ascending"></th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
