@@ -17,7 +17,7 @@ var stupidButton = {
 	},
 
 	showWin: function(e) {
-		alert('Nice! Here, have a cookie!');
+		alert('Terbaik! Nah 10sen :P');
 	}
 };
 
