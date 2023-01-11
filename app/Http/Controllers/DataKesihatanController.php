@@ -50,36 +50,35 @@ class DataKesihatanController extends Controller
     {
         $kesihatan = new Kesihatan();
         $user = DB::table('users')->where('id', Auth::id())->first();
-        if($request->hasFile('penyakit_img'))
-        {
+        if ($request->hasFile('penyakit_img')) {
             $file = $request->file('penyakit_img');
             $ext = $file->getClientOriginalExtension();
-            $filename = time().'.'.$ext;
-            $file->move('assets/upload/penyakitimage/',$filename);
+            $filename = time() . '.' . $ext;
+            $file->move('assets/upload/penyakitimage/', $filename);
             $kesihatan->penyakit_img = $filename;
         }
         $kesihatan->rawatan = $request->input('rawatan');
-            $kesihatan->rawatan_desc = $request->input('rawatan_desc');
-            $kesihatan->darah = $request->input('darah');
-            $kesihatan->darah_desc = $request->input('darah_desc');
-            $kesihatan->gula = $request->input('gula');
-            $kesihatan->gula_desc = $request->input('gula_desc');
-            $kesihatan->diabetes = $request->input('diabetes');
-            $kesihatan->diabetes_desc = $request->input('diabetes_desc');
-            $kesihatan->jantung = $request->input('jantung');
-            $kesihatan->jantung_desc = $request->input('jantung_desc');
-            $kesihatan->batuk = $request->input('batuk');
-            $kesihatan->batuk_desc = $request->input('batuk_desc');
-            $kesihatan->kidney = $request->input('kidney');
-            $kesihatan->kidney_desc = $request->input('kidney_desc');
-            $kesihatan->pembedahan = $request->input('pembedahan');
-            $kesihatan->pembedahan_desc = $request->input('pembedahan_desc');
-            $kesihatan->penyakit_lain = $request->input('penyakit_lain');
-            $kesihatan->penyakit_lain_desc = $request->input('penyakit_lain_desc');
-            $kesihatan->user_id = $user->id;
-            $kesihatan->user_name = $user->name;
-            $kesihatan->save();
-            return redirect()->back()->with('success','Data telah berjaya dimuatnaik');
+        $kesihatan->rawatan_desc = $request->input('rawatan_desc');
+        $kesihatan->darah = $request->input('darah');
+        $kesihatan->darah_desc = $request->input('darah_desc');
+        $kesihatan->gula = $request->input('gula');
+        $kesihatan->gula_desc = $request->input('gula_desc');
+        $kesihatan->diabetes = $request->input('diabetes');
+        $kesihatan->diabetes_desc = $request->input('diabetes_desc');
+        $kesihatan->jantung = $request->input('jantung');
+        $kesihatan->jantung_desc = $request->input('jantung_desc');
+        $kesihatan->batuk = $request->input('batuk');
+        $kesihatan->batuk_desc = $request->input('batuk_desc');
+        $kesihatan->kidney = $request->input('kidney');
+        $kesihatan->kidney_desc = $request->input('kidney_desc');
+        $kesihatan->pembedahan = $request->input('pembedahan');
+        $kesihatan->pembedahan_desc = $request->input('pembedahan_desc');
+        $kesihatan->penyakit_lain = $request->input('penyakit_lain');
+        $kesihatan->penyakit_lain_desc = $request->input('penyakit_lain_desc');
+        $kesihatan->user_id = $user->id;
+        $kesihatan->user_name = $user->name;
+        $kesihatan->save();
+        return redirect()->back()->with('success', 'Data telah berjaya dimuatnaik');
     }
 
     public function editkesihatanadmin(Request $request, $id)
@@ -104,7 +103,7 @@ class DataKesihatanController extends Controller
         $kesihatan->penyakit_lain = $request->input('penyakit_lain');
         $kesihatan->penyakit_lain_desc = $request->input('penyakit_lain_desc');
         $kesihatan->update();
-        return redirect()->back()->with('success','Data berjaya dikemaskini');
+        return redirect()->back()->with('success', 'Data berjaya dikemaskini');
 
 
 
@@ -116,7 +115,7 @@ class DataKesihatanController extends Controller
         $kesihatan = Kesihatan::find($id);
 
         $kesihatan->delete();
-        return redirect()->back()->with('success','Data berjaya dipadam');
+        return redirect()->back()->with('success', 'Data berjaya dipadam');
     }
 
 

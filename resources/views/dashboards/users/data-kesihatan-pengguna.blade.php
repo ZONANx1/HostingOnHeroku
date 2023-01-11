@@ -160,7 +160,7 @@
                                 </div>
                             </div>
 
-                        <div class="card-footer" align="center">
+                        <div class="" align="center">
                             <button type="submit" class="btn btn-primary" style="margin-right: 70px;">
                                 <i class="fa fa-dot-circle-o"></i> Hantar
                             </button>

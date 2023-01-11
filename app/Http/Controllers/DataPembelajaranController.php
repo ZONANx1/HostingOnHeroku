@@ -49,12 +49,11 @@ class DataPembelajaranController extends Controller
     {
         $pembelajaran = new Pembelajaran();
         $user = DB::table('users')->where('id', Auth::id())->first();
-        if($request->hasFile('pembelajaran'))
-        {
+        if ($request->hasFile('pembelajaran')) {
             $file = $request->file('pembelajaran');
             $ext = $file->getClientOriginalExtension();
-            $filename = time().'.'.$ext;
-            $file->move('assets/upload/pembelajaranimage/',$filename);
+            $filename = time() . '.' . $ext;
+            $file->move('assets/upload/pembelajaranimage/', $filename);
             $pembelajaran->pembelajaran = $filename;
         }
 
@@ -68,7 +67,7 @@ class DataPembelajaranController extends Controller
         $pembelajaran->user_id = $user->id;
         $pembelajaran->user_name = $user->name;
         $pembelajaran->save();
-        return redirect()->back()->with('success','Data telah berjaya dimuatnaik');
+        return redirect()->back()->with('success', 'Data telah berjaya dimuatnaik');
 
     }
 
@@ -83,19 +82,19 @@ class DataPembelajaranController extends Controller
         $pembelajaran->komen = $request->input('komen');
         $pembelajaran->progress = $request->input('progress');
         $pembelajaran->update();
-        return redirect()->back()->with('success','Data berjaya dikemaskini');
+        return redirect()->back()->with('success', 'Data berjaya dikemaskini');
 
     }
     public function deletepembelajaranadmin($id)
     {
         $pembelajaran = Pembelajaran::find($id);
         $pembelajaran->delete();
-        return redirect()->back()->with('success','Data berjaya dipadam');
+        return redirect()->back()->with('success', 'Data berjaya dipadam');
     }
 
     public function recordsuser(Request $request)
     {
-     
+
         if ($request->ajax()) {
 
             if ($request->input('start_date') && $request->input('end_date')) {
@@ -104,13 +103,13 @@ class DataPembelajaranController extends Controller
                 $end_date = Carbon::parse($request->input('end_date'));
 
                 if ($end_date->greaterThan($start_date)) {
-                  
+
                     $pembelajaran = Pembelajaran::whereBetween('created_at', [$start_date, $end_date])->where('user_id', Auth::id())->get();
                 } else {
                     $pembelajaran = DB::table('data_pembelajaran')->where('user_id', Auth::id())->get();
                 }
             } else {
-                   $pembelajaran = DB::table('data_pembelajaran')->where('user_id', Auth::id())->get();
+                $pembelajaran = DB::table('data_pembelajaran')->where('user_id', Auth::id())->get();
             }
 
             return response()->json([
@@ -123,7 +122,7 @@ class DataPembelajaranController extends Controller
 
     public function recordsadmin(Request $request)
     {
-     
+
         if ($request->ajax()) {
 
             if ($request->input('start_date') && $request->input('end_date')) {

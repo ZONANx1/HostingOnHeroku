@@ -3,14 +3,9 @@
 
 @section('content')
 
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -27,10 +22,8 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
-
     </style>
 </head>
-
 <body class="">
     <div class="container">
         <div class="row">
@@ -81,7 +74,7 @@
                                         <th>Kehadiran</th>
                                         <th>Butiran</th>
                                         <th>Tahap Kemajuan (%)</th>
-                                    
+
                                         <th>Date</th>
                                     </tr>
                                 </thead>
@@ -134,11 +127,11 @@
                 success: function(data) {
                     // Datatables
                     var i = 1;
-                    
+
                     $('#records').DataTable({
                         "data": data.pembelajaran,
                         // buttons
-                      
+
                         // responsive
                         "responsive": true,
                         "columns": [{
@@ -149,7 +142,7 @@
                             },
                             {
                                 "data": "kategori"
-                                
+
                             },
 
                             {
@@ -166,17 +159,17 @@
                                 "data": "kehadiran"
                             },
                             {
-                                "data": "komen" 
+                                "data": "komen"
                             },
 
                             {
                                 "data": "progress"
                             },
-                           
-                           
-                           
-                            
-                          
+
+
+
+
+
                             {
                                 "data": "created_at",
                                 "render": function(data, type, row, meta) {
@@ -185,11 +178,11 @@
                             }
                         ]
                     });
-                    
+
                 }
-                
+
             });
-           
+
         }
 
         fetch();
@@ -216,7 +209,7 @@
             fetch();
         });
 
-        
+
     </script>
 </body>
 

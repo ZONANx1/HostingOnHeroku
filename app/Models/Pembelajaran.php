@@ -11,14 +11,14 @@ class Pembelajaran extends Model
     use HasFactory;
     protected $table = 'data_pembelajaran';
     protected $fillable = [
-         'sesi_pembelajaran',
+        'sesi_pembelajaran',
         'kategori',
         'waktu_mula',
         'waktu_tamat',
         'kehadiran',
         'komen',
         'progress',
-        
+
     ];
     public function User()
     {

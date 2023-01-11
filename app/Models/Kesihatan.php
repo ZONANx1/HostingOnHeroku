@@ -11,7 +11,7 @@ class Kesihatan extends Model
     use HasFactory;
     protected $table = 'data_kesihatan';
     protected $fillable = [
-        
+
         'rawatan',
         'rawatan_desc',
         'darah',

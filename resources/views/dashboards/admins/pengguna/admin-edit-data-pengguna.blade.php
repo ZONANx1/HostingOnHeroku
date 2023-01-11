@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -65,10 +63,6 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                         colspan="1" aria-label="Platform(s): activate to sort column ascending">Tindakan
                                     </th>
-
-
-
-
                             </thead>
                             <tbody>
                                 @foreach ($user as $User)
@@ -83,8 +77,6 @@
                                         <td>{{ $User->age }}</td>
                                         <td>{{ $User->tinggi }}</td>
                                         <td>{{ $User->berat }}</td>
-
-
                                         <td>
                                             <div class="table-data-feature">
 
@@ -101,25 +93,16 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </tbody>
-
                         </table>
-
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <!-- /.card-body -->
 
     </div>
-
-
-
-
     <script src="jquery-3.4.1.min.js"></script>
     <script src="bootstrap/js/popper.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>

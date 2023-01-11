@@ -26,7 +26,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
-
                     <!-- Profile Image -->
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
@@ -34,22 +33,16 @@
                                 <img class="profile-user-img img-fluid img-circle admin_picture"
                                     src="{{ Auth::user()->picture }}" alt="Admin profile picture">
                             </div>
-
                             <h3 class="profile-username text-center admin_name">{{ Auth::user()->name }}</h3>
-
                             <p class="text-muted text-center">Admin</p>
-
                             <input type="file" name="admin_image" id="admin_image"
                                 style="opacity: 0;height:1px;display:none">
                             <a href="javascript:void(0)" class="btn btn-primary btn-block" id="change_picture_btn"><b>Tukar
                                     Gambar</b></a>
-
                         </div>
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
-
-
                 </div>
                 <!-- /.col -->
                 <div class="col-md-9">
@@ -142,5 +135,4 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-
 @endsection
