@@ -23,8 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    return view('test');
+Route::get('phpinfo', function () {
+    return view('phpinfo()');
 });
 
 Route::middleware(['middleware'=>'PreventBackHistory'])->group(function (){
